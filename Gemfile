@@ -29,6 +29,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # devise
 gem 'devise'
 
+# omniauth
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+
 # bootstrap
 gem 'twitter-bootstrap-rails'
 
@@ -44,6 +49,10 @@ gem 'twitter-bootstrap-rails'
 # admin function
 gem 'rails_admin'
 gem 'cancan'
+
+# image uploader
+gem 'carrierwave'
+gem 'mini_magick'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -61,6 +70,9 @@ group :development, :test do
 
   # Mail
   gem 'letter_opener_web'
+
+  # dotenv
+  gem 'dotenv-rails'
 end
 
 # gems for heroku

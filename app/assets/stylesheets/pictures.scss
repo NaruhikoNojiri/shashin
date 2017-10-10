@@ -6,13 +6,44 @@
   font-family: cursive;
 }
 
-footer {
-    width: 100%;
-    background-color:#dddddd;
-    padding: 20px 0 10px 0;
-    color: black;
-    margin: auto;
-    font-size: 12px;
-    position: absolute;    //htmlタグを基準とした配置
-    bottom: 0;
+.wrapper {
+  margin-bottom: 74px;
+}
+
+.row {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  word-wrap: break-word;
+  margin: 60px;
+}
+
+.row .user_info {
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+  border-collapse: collapse;
+  word-wrap: break-word;
+  padding: 10px;
+  img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+}
+
+
+.row .picture {
+    img {
+      width: 100%;
+    }
+}
+
+.row .content {
+  padding: 10px;
+  text-align: left;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+.row .btn {
+  padding: 10px,0px,10px;
 }

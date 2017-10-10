@@ -2,6 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+html {
+    position: relative;
+    min-height: 100%;
+}
+
 .flash {
   color: black;
   padding-top: 10px;
@@ -9,4 +14,19 @@
 
 body {
   text-align: center;
+}
+
+body.top {
+  background-image: url("top_bg.jpg");
+}
+
+footer {
+    width: 100%;
+    background-color:#dddddd;
+    padding: 20px 0 10px 0;
+    color: black;
+    margin: auto;
+    font-size: 12px;
+    position: absolute;    //htmlタグを基準とした配置
+    bottom: 0;
 }

@@ -3,14 +3,29 @@
     <p><%= notice %></p>
 
     <h1>写真一覧画面</h1>
-
-    <%= link_to "新規投稿",new_picture_path, class: 'btn btn-default'%>
+    <p>
+      <%= link_to "新規投稿",new_picture_path, class: 'btn btn-default'%>
+      <br>
+    </p>
     <% @pictures.each do |picture| %>
-      <p><strong><%= picture.title %></strong></p>
-      <p><%= picture.content %></p>
-      <%= link_to "編集",edit_picture_path(picture.id), class: 'btn btn-default btn-sm btn-success' %>
-      <%= link_to "削除",picture_path(picture.id), method: :delete, data: {confirm: '本当に削除してよろしいですか？'}, class: 'btn btn-default btn-sm btn-danger' %>
-
+    <div class="row">
+      <div class="user_info">
+        <%= profile_img(picture.user)%>
+        <%= picture.user.name%>
+      </div>
+      <div class="picture">
+        <p><%= profile_picture(picture)%></p>
+      </div>
+      <div class="content">
+          <strong><%= picture.title %></strong><br>
+          <%= picture.content %><br>
+          <small><%= picture.created_at %>に投稿</small><br>
+      </div>
+      <div class="btn">
+        <%= link_to "編集",edit_picture_path(picture.id), class: 'btn btn-default btn-sm btn-success' %>
+        <%= link_to "削除",picture_path(picture.id), method: :delete, data: {confirm: '本当に削除してよろしいですか？'}, class: 'btn btn-default btn-sm btn-danger' %>
+      </div>
+    </div>
     <% end %>
   </div>
 </div>
